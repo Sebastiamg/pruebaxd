@@ -4,12 +4,13 @@ import { createRoot } from 'react-dom/client';
 import { PrimeReactProvider } from 'primereact/api';
 
 import './index.css';
-import App from './App.tsx';
+import { RouterProvider } from 'react-router';
+import { ruter } from './routes/router.ts';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <PrimeReactProvider>
-      <App />
+      <RouterProvider router={ruter} />
     </PrimeReactProvider>
   </StrictMode>
 );
