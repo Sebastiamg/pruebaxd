@@ -5,7 +5,7 @@ import { PrimeReactProvider } from 'primereact/api';
 
 import './index.css';
 import { RouterProvider } from 'react-router';
-import { ruter } from './routes/router.ts';
+import { ruter } from './routes/router.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
