@@ -1,5 +1,9 @@
+import { Button } from 'primereact/button';                             
+
 export default function HomePage() {
   return (
-    <div>HomePage</div>
-  )
+    <div>
+      <Button label='Submit' />
+    </div>
+  );
 }
