@@ -1,0 +1,13 @@
+services:
+  backend:
+    image: postgres:15.3
+    container_name: pgprueba
+    restart: always
+    volumes:
+      - ./db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=${pg_USER}
+      - POSTGRES_DB=${pg_DB}
+      - POSTGRES_PASSWORD=${pg_PASSWORD}
+    ports:
+      - "5432:5432"
