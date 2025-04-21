@@ -23,7 +23,7 @@ export default function LoginPage() {
 
       <form
         onSubmit={ handleSubmit( onSubmit ) }
-        className='flex flex-col justify-center items-center p-4'>
+        className='flex flex-col justify-center items-center p-4 w-full'>
 
         <span
           className='mt-4 mb-4 font-bold text-xl'
@@ -42,6 +42,7 @@ export default function LoginPage() {
             }
           } ) }
           className='w-full'
+          autoComplete='off'
         />
         { errors.email && (
           <small className='text-red-500 w-full'>
@@ -65,10 +66,9 @@ export default function LoginPage() {
                 { ...field }
                 value={ field.value || '' }
                 placeholder='Password'
-                className='mt-6 mb-2 w-full'
+                className='mt-6 mb-2 w-full flex-col'
                 inputClassName='w-full'
-
-                // toggleMask
+                toggleMask
                 feedback={ true }
               />
               { fieldState.error && (
